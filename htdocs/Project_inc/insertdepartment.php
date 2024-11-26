@@ -2,7 +2,6 @@
 include 'dbconnect.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // form data
     $departmentName = $_POST['departmentName'];
     $contactNumber = $_POST['contactNumber'];
 
@@ -20,15 +19,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html>
 <head>
     <title>Projects Inc. - Add Department</title>
-    <link rel="stylesheet" href="insertdepartment.css">
+    <link rel="stylesheet" href="insert.css">
 </head>
 <body>
-<nav>
-        <ul>
-            <li><a href="department.php">Back</a></li>
-        </ul>
-    </nav>   
-    <h1>Add New Department</h1>
     <form method="POST" action="insertdepartment.php">
     <label for="departmentName"></label>
     <input type="text" name="departmentName" placeholder="Departments Name" required><br>

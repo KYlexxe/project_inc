@@ -1,8 +1,8 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "project inc";
+$servername = "127.0.0.1";
+$username = "mariadb";     
+$password = "mariadb";
+$dbname = "mariadb";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 

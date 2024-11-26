@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.form-container input[type="text"], .form-container input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #6e9dd3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-container button:hover {
+    background-color: #498ab6;
+}
+
+.employee-profile {
+    width: 90%;
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.employee-profile div {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 20px);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.employee-profile img {
+max-width: 120px;
+max-height: 120px;
+object-fit: cover;
+border-radius: 50%;
+margin-bottom: 10px;
+}
+
+.employee-profile p {
+font-size: 16px;
+color: #555;
+}
+
+.success {
+color: green;
+text-align: center;
+}
+
+.error {
+color: red;
+text-align: center;
+}
+
+.insert {
+text-align: left;
+margin-right: 70%;
+width: 200px;
+}
+
+.insert a {
+padding: 14px;
+background-color: #6bafdd;
+color: rgb(0, 0, 0);
+text-decoration: none;
+border-radius: 6px;
+border: 1px blue;
+font-size: 16px;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.insert a:hover {
+background-color: #7ea4b9;
+}
+
+
+
+@media (max-width: 768px) {
+    .employee-profile div {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .employee-profile div {
+        width: 100%;
+    }
+
+    .form-container {
+        width: 90%;
+    }
+}

@@ -1,15 +1,20 @@
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 table {
-    width: 100%;
+    width: 80%;
     border-collapse: collapse;
 }
 
 th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
+    border: 1px solid #6bafdd;
+    padding: 13px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: #7db1bb;
     text-align: left;
 }
 
@@ -18,34 +23,61 @@ tr:nth-child(even) {
 }
 
 tr:hover {
-    background-color: #ddd;
+    background-color: #73b8e0;
 }
 
-nav {
-    display: flex;
-    justify-content: center;
-    background-color: #333;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    padding: 14px 20px;
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-button {
+    background-color: #73b8e0;
+    color: rgb(0, 0, 0);
+    padding: 16px;
+    font-size: 16px;
+    border: 1px solid;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #73b8e0;
+    color: black;
+    min-width: 160px;
+    box-shadow: 3px 12px 18px 0px rgba(0,0,0,0.2);
+    padding: 14px 16px;
+    z-index: 2;
+    border-radius: 16px;
+  }
+  
+  .dropdown:hover .dropdown-content {
     display: block;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .insert {
+    text-align: left;
+    margin-left: 135px;
 }
 
-nav ul li a:hover {
-    background-color: #575757;
+.insert a {
+    padding: 14px;
+    background-color: #6bafdd;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 6px;
+    border: 1px blue;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.insert a:hover {
+    background-color: #7ea4b9;
 }
 

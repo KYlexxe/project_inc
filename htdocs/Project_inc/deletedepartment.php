@@ -9,13 +9,18 @@ if ($departmentId) {
     $stmt->execute();
     $result = $stmt->get_result();
 
-
     if ($result->num_rows > 0) {
+        $deleteProjectsSql = "DELETE FROM project WHERE departmentID = ?";
+        $deleteStmt = $conn->prepare($deleteProjectsSql);
+        $deleteStmt->bind_param("i", $departmentId);
+        $deleteStmt->execute();
+        $deleteStmt->close();
+
         $sql = "DELETE FROM department WHERE departmentID = ?";
-        $stmt = $conn->prepare($sql);
+     $stmt = $conn->prepare($sql);
         $stmt->bind_param("i", $departmentId);
 
-        if ($stmt->execute()) {
+     if ($stmt->execute()) {
             header("Location: department.php");
             exit();
         } else {
@@ -23,7 +28,6 @@ if ($departmentId) {
         }
     } else {
         echo "Department not found.";
-        
     }
 } else {
     echo "Invalid department ID.";
